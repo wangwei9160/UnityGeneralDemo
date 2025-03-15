@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 97d860cf3af710341bb25de35fcff91f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/TurnPage_fui.bytes
+  uploadId: 658733

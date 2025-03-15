@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6940e9cae0b012148b4848f1c72c314a
+timeCreated: 1446629259
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/scene1.unity
+  uploadId: 658733

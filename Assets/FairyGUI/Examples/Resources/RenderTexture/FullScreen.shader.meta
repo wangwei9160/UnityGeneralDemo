@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 3215886e81b218d41a9de58c554442c0
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/RenderTexture/FullScreen.shader
+  uploadId: 658733

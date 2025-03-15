@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 61e3084654685784f84d844e0fc30e4f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/EmitNumbers_fui.bytes
+  uploadId: 658733

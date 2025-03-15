@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3aa4363269faec8498ef949480f5e8b5
+timeCreated: 1446611222
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 09 - Extension.unity
+  uploadId: 658733

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 78878c40447242843aa913ef50cce606
+timeCreated: 1465402161
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Filter/FilterMain.cs
+  uploadId: 658733

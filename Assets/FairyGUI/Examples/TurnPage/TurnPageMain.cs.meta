@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 0246af0692f804e419764f96010083e0
+timeCreated: 1547288041
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/TurnPage/TurnPageMain.cs
+  uploadId: 658733

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cf0fd7d55aa59c44a92b1e6248258bfe
+timeCreated: 1456392929
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 19 - HitTest.unity
+  uploadId: 658733

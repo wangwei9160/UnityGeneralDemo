@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5cc4d91cab8814f48981f065ffb91b2a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/PullToRefresh_fui.bytes
+  uploadId: 658733

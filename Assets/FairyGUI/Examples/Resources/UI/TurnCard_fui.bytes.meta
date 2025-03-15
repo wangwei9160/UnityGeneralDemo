@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 68c3403d1c5501742a08b2453bbd559e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/TurnCard_fui.bytes
+  uploadId: 658733

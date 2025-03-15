@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 359c0adf0408b364fbd36b6173b72867
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/Cooldown_fui.bytes
+  uploadId: 658733

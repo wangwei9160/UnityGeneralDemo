@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 72adad54c37cc25499988e9b785d5b90
+timeCreated: 1446194671
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Bag/BagMain.cs
+  uploadId: 658733

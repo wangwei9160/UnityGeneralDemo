@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b0a30153bc9a1bd4197ea6499ae08bc3
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/Perspective_fui.bytes
+  uploadId: 658733

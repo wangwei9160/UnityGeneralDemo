@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2b98557f90d48814a81ed521a3d4ca25
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/HeadBar_fui.bytes
+  uploadId: 658733

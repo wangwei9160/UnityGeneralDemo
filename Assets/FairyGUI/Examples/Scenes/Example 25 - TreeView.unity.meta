@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0bc596d82327941479fad22a23c339ee
+timeCreated: 1466782562
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 25 - TreeView.unity
+  uploadId: 658733

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3e95d77aad938b245b60a4698a2f7be8
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/Filter_fui.bytes
+  uploadId: 658733

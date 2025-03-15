@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: e1401866bdaef3a41b64115e2896151d
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/RenderTexture/RenderImageCamera.prefab
+  uploadId: 658733

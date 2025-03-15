@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5044755b433cf354eb6f4e2f9f2173b9
+timeCreated: 1540944203
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/Role/npc.prefab
+  uploadId: 658733

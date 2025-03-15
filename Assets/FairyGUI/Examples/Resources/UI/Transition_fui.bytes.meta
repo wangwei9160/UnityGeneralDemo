@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c73a297bc5f785f4a83bc85211a85b10
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/Transition_fui.bytes
+  uploadId: 658733

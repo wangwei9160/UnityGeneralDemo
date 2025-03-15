@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: dffc58029aa66074287bfe11db08a102
+timeCreated: 1464248165
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Gesture/GestureMain.cs
+  uploadId: 658733

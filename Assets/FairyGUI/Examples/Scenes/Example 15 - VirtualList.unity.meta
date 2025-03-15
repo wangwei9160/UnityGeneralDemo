@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b75df39b8fbcc7f469a7335938f54d7e
+timeCreated: 1456387382
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 15 - VirtualList.unity
+  uploadId: 658733

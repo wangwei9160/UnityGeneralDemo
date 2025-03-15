@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 716b6afb6abbcdd4297021a99ac3795f
+timeCreated: 1446193142
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 05 - Joystick.unity
+  uploadId: 658733

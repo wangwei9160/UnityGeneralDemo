@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 867859be40bfae045a2669a57b1e6601
+timeCreated: 1476970857
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 27 - ScrollPane.unity
+  uploadId: 658733

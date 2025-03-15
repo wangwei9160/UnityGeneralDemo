@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fc65f94cd947b46b6ad39d40179bd24b
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/TextMeshPro_fui.bytes
+  uploadId: 658733

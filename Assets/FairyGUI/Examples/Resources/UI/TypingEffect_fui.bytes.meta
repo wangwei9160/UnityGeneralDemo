@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e82e588b274dee84682a15114b8b5d6f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/TypingEffect_fui.bytes
+  uploadId: 658733

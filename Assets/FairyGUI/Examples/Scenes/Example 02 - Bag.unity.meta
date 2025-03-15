@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7bb0881047732e549a389bf881da507b
+timeCreated: 1446193142
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 02 - Bag.unity
+  uploadId: 658733

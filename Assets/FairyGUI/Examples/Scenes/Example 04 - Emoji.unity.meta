@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3231025ce71198b4fabbaa7c03b429d8
+timeCreated: 1446194671
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 04 - Emoji.unity
+  uploadId: 658733

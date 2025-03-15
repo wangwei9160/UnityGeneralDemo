@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    {
+        "type": "emmylua_attach",
+        "request": "attach",
+        "name": "Attach by process id",
+        "pid": 0,
+        "processName": ""
+    },
+        {
+            "name": "Attach to Unity",
+            "type": "vstuc",
+            "request": "attach"
+        }
+     ]
+}

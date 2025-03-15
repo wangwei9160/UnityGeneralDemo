@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 99d5d7fbdec0c8249885740dfe14ad8f
+timeCreated: 1464336759
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 22 - Gesture.unity
+  uploadId: 658733

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: da00dbf49111cd64ea7c7ceb7a7e4618
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/LoopList_fui.bytes
+  uploadId: 658733

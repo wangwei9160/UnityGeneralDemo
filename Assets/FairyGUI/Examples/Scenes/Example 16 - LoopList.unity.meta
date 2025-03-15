@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdd703e7d454b1441a6f90bb1dccd3d6
+timeCreated: 1456388435
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 16 - LoopList.unity
+  uploadId: 658733

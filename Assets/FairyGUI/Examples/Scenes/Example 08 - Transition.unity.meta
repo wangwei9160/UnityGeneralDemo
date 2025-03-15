@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da16b4e6c83f4644091ac783878ae6ec
+timeCreated: 1446602522
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 08 - Transition.unity
+  uploadId: 658733

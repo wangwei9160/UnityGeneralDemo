@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 537f052b9bcb3274ca109d206e7b1f71
+timeCreated: 1461431245
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 21 - Curve UI.unity
+  uploadId: 658733

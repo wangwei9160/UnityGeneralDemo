@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f610d32095a9f6f48b1ada37f0b76da2
+timeCreated: 1445931749
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/Role/Materials/U1NPC0040.mat
+  uploadId: 658733

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ec52002c32d42344f96be9a0561d52f8
+timeCreated: 1461431446
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/Curve/New Material.mat
+  uploadId: 658733

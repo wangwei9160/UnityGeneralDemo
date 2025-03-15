@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: be05ee8cec8ae704e8e6161295a4e21d
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/Particles_fui.bytes
+  uploadId: 658733

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 385f5f841a2b93449bc0a7d72f1034e0
+timeCreated: 1446194671
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 03 - CoolDown.unity
+  uploadId: 658733

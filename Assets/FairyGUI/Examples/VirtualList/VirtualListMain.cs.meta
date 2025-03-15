@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: cfc2db50aaedb7843a486cc282c0ec02
+timeCreated: 1456387599
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/VirtualList/VirtualListMain.cs
+  uploadId: 658733

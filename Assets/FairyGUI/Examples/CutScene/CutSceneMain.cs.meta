@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f0c05fcb4b735cf4587717a360b2a231
+timeCreated: 1446628633
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/CutScene/CutSceneMain.cs
+  uploadId: 658733

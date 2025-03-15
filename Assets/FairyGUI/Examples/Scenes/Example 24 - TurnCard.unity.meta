@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e0f565de6d6d7e64da7c0688e65d565d
+timeCreated: 1465455953
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 24 - TurnCard.unity
+  uploadId: 658733

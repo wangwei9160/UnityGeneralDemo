@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aa9cae01e1843384686010036f374ee2
+timeCreated: 1464247826
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/Gesture/Globe Material.mat
+  uploadId: 658733

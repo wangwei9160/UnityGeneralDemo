@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba9fecbe33a8173448d5c4e65809460f
+timeCreated: 1446569181
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 07 - EmitNumbers.unity
+  uploadId: 658733

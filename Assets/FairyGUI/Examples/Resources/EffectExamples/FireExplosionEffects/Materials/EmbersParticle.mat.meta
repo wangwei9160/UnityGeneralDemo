@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 776677ab3818fb249adaca05f4e04545
+timeCreated: 1471532950
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/EffectExamples/FireExplosionEffects/Materials/EmbersParticle.mat
+  uploadId: 658733

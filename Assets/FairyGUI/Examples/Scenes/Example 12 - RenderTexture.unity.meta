@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c830bc4febb89840805f5f6f21e8138
+timeCreated: 1446193142
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 12 - RenderTexture.unity
+  uploadId: 658733

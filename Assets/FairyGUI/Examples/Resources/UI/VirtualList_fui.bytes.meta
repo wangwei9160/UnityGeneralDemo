@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ed1d9f6e251c95343859bc0e6fdc634f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/VirtualList_fui.bytes
+  uploadId: 658733

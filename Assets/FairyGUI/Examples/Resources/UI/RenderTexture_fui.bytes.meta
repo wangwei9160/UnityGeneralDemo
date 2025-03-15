@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 25e072f50178dd743bf51e98e7906433
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/RenderTexture_fui.bytes
+  uploadId: 658733

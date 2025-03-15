@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a076ecd25050714ab2eda1d84dfa532
+timeCreated: 1446540639
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Scenes/Example 06 - HeadBar.unity
+  uploadId: 658733

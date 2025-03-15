@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db148c03ade42504588dd6f2f50ecaee
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/Bag_fui.bytes
+  uploadId: 658733

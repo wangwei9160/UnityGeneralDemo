@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4ee7f37d1f11c2c459ff36db6169332c
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49479
+  packageName: FairyGUI
+  packageVersion: 5.1.0
+  assetPath: Assets/FairyGUI/Examples/Resources/UI/Guide_fui.bytes
+  uploadId: 658733
