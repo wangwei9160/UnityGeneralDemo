@@ -4,7 +4,7 @@ function UIManager:ctor(...)
     self.ActiveUI = {}
 end
 
-function UIManager:Show(uiName)
+function UIManager:Show(uiName , data)
     local tmp = UIConfig[uiName]
     if tmp == nil then
         print("不存在这个uiName" , uiName)
@@ -13,8 +13,9 @@ function UIManager:Show(uiName)
     local ui = LuaHelper.LoadUI(tmp.packagename , tmp.uiSkin)
     -- print(ui == nil)
     local uiClass = require(tmp.luapath).new()
-    uiClass:OnInit(ui)
+    uiClass:OnInit(ui , data)
     self.ActiveUI[uiName] = ui
+    return uiClass
 end
 
 function UIManager:Hide(uiName)
