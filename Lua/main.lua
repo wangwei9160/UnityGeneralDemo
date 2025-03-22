@@ -8,4 +8,4 @@ UIBase = require("UI/View/UIBase")
 UIShowBase = require("UI/View/UIShowBase")
 Config = require("Config")
 
-UIManager:Show("Main")
+UIManager:Show("GroupBattleMain")

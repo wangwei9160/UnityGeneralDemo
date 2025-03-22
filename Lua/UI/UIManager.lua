@@ -2,6 +2,7 @@ local UIManager = Class("UIManager")
 
 function UIManager:ctor(...)
     self.ActiveUI = {}
+    self.uiStack = nil
 end
 
 function UIManager:Show(uiName , data)
@@ -12,6 +13,10 @@ function UIManager:Show(uiName , data)
     end
     local ui = LuaHelper.LoadUI(tmp.packagename , tmp.uiSkin)
     -- print(ui == nil)
+    if data == nil then
+        data = {}
+    end
+    data["name"] = uiName
     local uiClass = require(tmp.luapath).new()
     uiClass:OnInit(ui , data)
     self.ActiveUI[uiName] = ui
