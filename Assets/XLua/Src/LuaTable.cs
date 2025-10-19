@@ -140,6 +140,7 @@ namespace XLua
                 var translator = luaEnv.translator;
                 int oldTop = LuaAPI.lua_gettop(L);
                 LuaAPI.lua_getref(L, luaReference);
+                UnityEngine.Debug.Log("oldTop:"+ oldTop + " luaReference:" + luaReference + " path:" + path);
                 if (0 != LuaAPI.xlua_pgettable_bypath(L, -1, path))
                 {
                     luaEnv.ThrowExceptionFromError(oldTop);

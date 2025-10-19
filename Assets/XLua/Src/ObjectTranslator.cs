@@ -880,7 +880,6 @@ namespace XLua
         public object GetObject(RealStatePtr L, int index, Type type)
         {
             int udata = LuaAPI.xlua_tocsobj_safe(L, index);
-
             if (udata != -1)
             {
                 object obj = objects.Get(udata);
@@ -893,6 +892,7 @@ namespace XLua
                 {
                     GetCSObject get;
                     int type_id = LuaAPI.xlua_gettypeid(L, index);
+                    UnityEngine.Debug.Log("tyep_id:" + type_id);
                     if (type_id != -1 && type_id == decimal_type_id)
                     {
                         decimal d;
@@ -918,6 +918,7 @@ namespace XLua
             }
             else
             {
+                UnityEngine.Debug.Log("Get Object By Type");
                 v = (T)GetObject(L, index, typeof(T));
             }
         }
@@ -1053,6 +1054,7 @@ namespace XLua
 
                     if (TryDelayWrapLoader(L, alias_type == null ? type : alias_type))
                     {
+                        // UnityEngine.Debug.Log("TryDelayWrapLoader");
                         LuaAPI.luaL_getmetatable(L, alias_type == null ? type.FullName : alias_type.FullName);
                     }
                     else

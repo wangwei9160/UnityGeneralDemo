@@ -16,7 +16,29 @@ namespace XLua
     public partial class DelegateBridge : DelegateBridgeBase
     {
 		
-		public void __Gen_Delegate_Imp0()
+		public void __Gen_Delegate_Imp0(string p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                
+                LuaAPI.lua_pushstring(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp1()
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -37,7 +59,7 @@ namespace XLua
 #endif
 		}
         
-		public double __Gen_Delegate_Imp1(double p0, double p1)
+		public double __Gen_Delegate_Imp2(double p0, double p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -55,28 +77,6 @@ namespace XLua
                 double __gen_ret = LuaAPI.lua_tonumber(L, errFunc + 1);
                 LuaAPI.lua_settop(L, errFunc - 1);
                 return  __gen_ret;
-#if THREAD_SAFE || HOTFIX_ENABLE
-            }
-#endif
-		}
-        
-		public void __Gen_Delegate_Imp2(string p0)
-		{
-#if THREAD_SAFE || HOTFIX_ENABLE
-            lock (luaEnv.luaEnvLock)
-            {
-#endif
-                RealStatePtr L = luaEnv.rawL;
-                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
-                
-                LuaAPI.lua_pushstring(L, p0);
-                
-                PCall(L, 1, 0, errFunc);
-                
-                
-                
-                LuaAPI.lua_settop(L, errFunc - 1);
-                
 #if THREAD_SAFE || HOTFIX_ENABLE
             }
 #endif
@@ -702,6 +702,52 @@ namespace XLua
 #endif
 		}
         
+		public XLua.LuaEnv __Gen_Delegate_Imp30(object p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                
+                PCall(L, 1, 1, errFunc);
+                
+                
+                XLua.LuaEnv __gen_ret = (XLua.LuaEnv)translator.GetObject(L, errFunc + 1, typeof(XLua.LuaEnv));
+                LuaAPI.lua_settop(L, errFunc - 1);
+                return  __gen_ret;
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public byte[] __Gen_Delegate_Imp31(object p0, ref string p1)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                LuaAPI.lua_pushstring(L, p1);
+                
+                PCall(L, 2, 2, errFunc);
+                
+                p1 = LuaAPI.lua_tostring(L, errFunc + 2);
+                
+                byte[] __gen_ret = LuaAPI.lua_tobytes(L, errFunc + 1);
+                LuaAPI.lua_settop(L, errFunc - 1);
+                return  __gen_ret;
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
         
 		static DelegateBridge()
 		{
@@ -711,24 +757,34 @@ namespace XLua
 		public override Delegate GetDelegateByType(Type type)
 		{
 		
-		    if (type == typeof(System.Action))
+		    if (type == typeof(ReloadDelegate))
 			{
-			    return new System.Action(__Gen_Delegate_Imp0);
-			}
-		
-		    if (type == typeof(UnityEngine.Events.UnityAction))
-			{
-			    return new UnityEngine.Events.UnityAction(__Gen_Delegate_Imp0);
-			}
-		
-		    if (type == typeof(System.Func<double, double, double>))
-			{
-			    return new System.Func<double, double, double>(__Gen_Delegate_Imp1);
+			    return new ReloadDelegate(__Gen_Delegate_Imp0);
 			}
 		
 		    if (type == typeof(System.Action<string>))
 			{
-			    return new System.Action<string>(__Gen_Delegate_Imp2);
+			    return new System.Action<string>(__Gen_Delegate_Imp0);
+			}
+		
+		    if (type == typeof(XLuaTest.CallLuaTest.funcTest))
+			{
+			    return new XLuaTest.CallLuaTest.funcTest(__Gen_Delegate_Imp0);
+			}
+		
+		    if (type == typeof(System.Action))
+			{
+			    return new System.Action(__Gen_Delegate_Imp1);
+			}
+		
+		    if (type == typeof(UnityEngine.Events.UnityAction))
+			{
+			    return new UnityEngine.Events.UnityAction(__Gen_Delegate_Imp1);
+			}
+		
+		    if (type == typeof(System.Func<double, double, double>))
+			{
+			    return new System.Func<double, double, double>(__Gen_Delegate_Imp2);
 			}
 		
 		    if (type == typeof(System.Action<double>))

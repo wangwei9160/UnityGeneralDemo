@@ -471,6 +471,8 @@ namespace XLua
             function metatable:__index(key) 
                 local fqn = rawget(self,'.fqn')
                 fqn = ((fqn and fqn .. '.') or '') .. key
+                -- print('metatable:__index -> ')
+                -- print(fqn)
 
                 local obj = import_type(fqn)
 

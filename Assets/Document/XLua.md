@@ -469,6 +469,8 @@ public int GetTypeId(RealStatePtr L, Type type)
 1. 如果已经被注册过，则直接返回对应的type_id
 
 ```CSharp
+Dictionary<Type, int> typeIdMap = new Dictionary<Type, int>();
+
 internal int getTypeId(RealStatePtr L, Type type, out bool is_first, LOGLEVEL log_level = LOGLEVEL.WARN)
 {
     int type_id;
@@ -481,16 +483,24 @@ internal int getTypeId(RealStatePtr L, Type type, out bool is_first, LOGLEVEL lo
 }
 ```
 
-2. 如果是全新访问的，
+2. 如果是全新访问的，进入注册流程
 
 ```CSharp
+// 查找类型全名在Lua 注册表中获取预先注册的元表
+LuaAPI.luaL_getmetatable(L, alias_type == null ? type.FullName : alias_type.FullName);
+
+// 延迟加载，反射或加载预编译代码，将该类型的所有桥接代码和元表注册到Lua State中。
+if (TryDelayWrapLoader(L, alias_type == null ? type : alias_type))
+
 LuaAPI.lua_pushvalue(L, -1);
 // 保存到注册表，并且获得引用ID
 type_id = LuaAPI.luaL_ref(L, LuaIndexes.LUA_REGISTRYINDEX);
+// 元表[1] = type_id 的注册 
 LuaAPI.lua_pushnumber(L, type_id);
 LuaAPI.xlua_rawseti(L, -2, 1);
-LuaAPI.lua_pop(L, 1);
+LuaAPI.lua_pop(L, 1); // 弹出栈顶元素
 
+// C# 侧 缓存
 if (type.IsValueType())
 {
     typeMap.Add(type_id, type);
@@ -564,3 +574,65 @@ public ObjectCast GetCaster(Type type)
 // ObjectTranslator 类中持有一个Dictionary
 Dictionary<int, WeakReference> delegate_bridges = new Dictionary<int, WeakReference>(); 
 ```
+
+### 辅助工具 延迟加载 delayWrap
+
+Lua侧首次访问一个C# 类型时，动态或通过预生成的代码，将该C#类型的Lua桥接逻辑加载并注册到当前的Lua State中。
+
+#### 目的
+确保C# 成员在Lua中变得可访问
+
+```CSharp
+//延迟加载
+private readonly Dictionary<Type, Action<RealStatePtr>> delayWrap = new Dictionary<Type, Action<RealStatePtr>>();
+
+public void DelayWrapLoader(Type type, Action<RealStatePtr> loader)
+{
+    delayWrap[type] = loader;
+}
+
+// 防止重复加载
+Dictionary<Type, bool> loaded_types = new Dictionary<Type, bool>();
+
+// XLua_Gen_Initer_Register__
+static XLua_Gen_Initer_Register__()
+{
+    XLua.LuaEnv.AddIniter(Init);
+}
+// ==> 加载
+translator.DelayWrapLoader(typeof(object), SystemObjectWrap.__Register);
+```
+
+#### 1. 检查和标记
+
+```CSharp
+if (loaded_types.ContainsKey(type)) return true;
+loaded_types.Add(type, true);
+```
+
+#### 2. 初始化
+
+```CSharp
+// 在Lua注册表内创建一个空的元表
+LuaAPI.luaL_newmetatable(L, type.FullName); //先建一个metatable，因为加载过程可能会需要用到
+LuaAPI.lua_pop(L, 1);
+```
+
+#### 3. 延迟加载
+
+如果在delayWrap中找到了该类型的loader委托，立即执行
+
+```CSharp
+Action<RealStatePtr> loader;
+int top = LuaAPI.lua_gettop(L);
+if (delayWrap.TryGetValue(type, out loader))
+{
+    delayWrap.Remove(type);
+    loader(L);
+}
+```
+
+#### 4. 运行时代码生成
+
+如果可以动态生成，则动态生成一个C# Wrapper 类，通过反射调用该类的静态方法__Register(L)；否则使用反射机制处理调用。
+

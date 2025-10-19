@@ -113,6 +113,8 @@ namespace XLuaTest
 
             calc[1] = "eeee";
             Debug.Log("list[1]=" + calc[1]);
+            ICalc calc2 = calc_new(20, "hello", "john"); //constructor
+            calc2.Add(1, 2);
         }
 
         void Notify(object sender, PropertyChangedEventArgs e)
