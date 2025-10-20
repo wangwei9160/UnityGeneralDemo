@@ -797,6 +797,11 @@ namespace XLua
 			    return new XLuaTest.IntParam(__Gen_Delegate_Imp4);
 			}
 		
+		    if (type == typeof(XLuaTest.CallLuaTest.GetFunc))
+			{
+			    return new XLuaTest.CallLuaTest.GetFunc(__Gen_Delegate_Imp4);
+			}
+		
 		    if (type == typeof(XLuaTest.Vector3Param))
 			{
 			    return new XLuaTest.Vector3Param(__Gen_Delegate_Imp5);

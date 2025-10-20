@@ -905,6 +905,7 @@ namespace XLua
                         return get(L, index);
                     }
                 }
+                UnityEngine.Debug.Log("objectCasters.GetCaster");
                 return (objectCasters.GetCaster(type)(L, index, null));
             }
         }
@@ -914,6 +915,7 @@ namespace XLua
             Func<RealStatePtr, int, T> get_func;
             if (tryGetGetFuncByType(typeof(T), out get_func))
             {
+                UnityEngine.Debug.Log("Get Func By Type");
                 v = get_func(L, index);
             }
             else

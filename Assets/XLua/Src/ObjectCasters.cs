@@ -392,6 +392,7 @@ namespace XLua
 
         private object getLuaTable(RealStatePtr L, int idx, object target)
         {
+            UnityEngine.Debug.Log("getLuaTable called");
             if (LuaAPI.lua_type(L, idx) == LuaTypes.LUA_TUSERDATA)
             {
                 object obj = translator.SafeGetCSObj(L, idx);
@@ -407,6 +408,7 @@ namespace XLua
 
         private object getLuaFunction(RealStatePtr L, int idx, object target)
         {
+            UnityEngine.Debug.Log("getLuaFunction called");
             if (LuaAPI.lua_type(L, idx) == LuaTypes.LUA_TUSERDATA)
             {
                 object obj = translator.SafeGetCSObj(L, idx);
@@ -439,6 +441,7 @@ namespace XLua
 
             if (typeof(Delegate).IsAssignableFrom(type))
             {
+                UnityEngine.Debug.Log("IsAssignableFrom Delegate");
                 return (RealStatePtr L, int idx, object target) =>
                 {
                     object obj = fixTypeGetter(L, idx, target);

@@ -121,17 +121,147 @@ if(gen_param_count == 1&& translator.Assignable<object>(L, 1))
 
 ## CSharp Call Lua
 
-### 0. 
+### 0. Test
 
-LuaEnv.Global.Get\<T\>： 从全局表中获取一个指定类型的数据，参数为 string 类型标识在 lua 中的字段名。Xlua 根据结构来映射。
-
-```csharp
-private LuaTable _G;
-public LuaTable Global
+```CSharp
+namespace XLuaTest
 {
-    get
+    public class CallLuaTest : MonoBehaviour
     {
-        return _G;
+        [CSharpCallLua]
+        public delegate void funcTest(string str);
+        [CSharpCallLua]
+        public delegate int GetFunc(int x);
+
+        private string script = @"
+                GetFunc = function(x)
+                    return x + 1
+                end
+
+                FuncTest = function(str)
+                    print('FuncTest:' .. str)
+                end
+            ";
+        private LuaEnv luaenv;
+        void Start()
+        {
+            luaenv = new LuaEnv();
+            Test(luaenv);
+            // GC.WaitForPendingFinalizers();
+            // luaenv.Dispose();
+        }
+
+        void Test(LuaEnv luaenv)
+        {
+            luaenv.DoString(script);
+            funcTest func_test = luaenv.Global.Get<funcTest>("FuncTest");
+            func_test("hello funcTest");
+            func_test("你好 funcTest");
+            GetFunc get_func_test = luaenv.Global.Get<GetFunc>("GetFunc");
+            Debug.Log("GetFunc result:" + get_func_test(10));
+        }
+
+        void OnDisable()
+        {
+            luaenv.Dispose();
+        }
     }
 }
 ```
+
+### 1. Lua Table Get 方法
+
+Lua Table内有Get泛型方法 --> ObejctTranslator 类型转换 --> DelegateBridge 桥接代码
+
+```CSharp
+
+// Lua Table
+public void Get<TKey, TValue>(TKey key, out TValue value)
+{
+    /* ... */
+    translator.Get(L, -1, out value);
+    /* ... */
+    return value;
+}
+```
+
+### 2. ObejctTranslator Get<T>
+```CSharp
+public void Get<T>(RealStatePtr L, int index, out T v)
+{
+    Func<RealStatePtr, int, T> get_func;
+    if (tryGetGetFuncByType(typeof(T), out get_func))
+    {
+        v = get_func(L, index); // 基础类型
+    }
+    else
+    {
+        // 复杂、自定义类型，userdata、table、delegate
+        v = (T)GetObject(L, index, typeof(T)); 
+    }
+}
+```
+
+### 3. ObjectCast  创建桥接代码，捕获引用
+
+```CSharp
+// ObjectCast genCaster(Type type)
+if (typeof(Delegate).IsAssignableFrom(type))
+{
+    return (RealStatePtr L, int idx, object target) =>
+    {
+        object obj = fixTypeGetter(L, idx, target);
+        if (obj != null) return obj;
+
+        if (!LuaAPI.lua_isfunction(L, idx))
+        {
+            return null;
+        }
+        // 创建桥接代码
+        return translator.CreateDelegateBridge(L, type, idx);
+        // 创建后，捕获Lua侧的弱引用，记录
+        // delegate_bridges[reference] = new WeakReference(bridge);
+    };
+}
+```
+
+### 4. 桥接代码， 生成代码
+
+```CSharp
+// 自动生成的桥接代码
+public override Delegate GetDelegateByType(Type type) 
+{
+    if (type == typeof(XLuaTest.CallLuaTest.GetFunc))
+    {
+        return new XLuaTest.CallLuaTest.GetFunc(__Gen_Delegate_Imp4);
+    }
+}
+
+// 桥接代码内已经有的预代码，针对不同类型的函数签名执行不同的操作
+public int __Gen_Delegate_Imp4(int p0)
+{
+#if THREAD_SAFE || HOTFIX_ENABLE
+    lock (luaEnv.luaEnvLock)
+    {
+#endif
+        RealStatePtr L = luaEnv.rawL;
+        int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+        
+        LuaAPI.xlua_pushinteger(L, p0); // p0 压入Lua Stack
+        // Lua Stack : [error_func , lua_func , p0]
+        PCall(L, 1, 1, errFunc);    // Lua 解释器 pcall调用
+        
+        
+        int __gen_ret = LuaAPI.xlua_tointeger(L, errFunc + 1); // 获取栈顶的元素，转成c#的int 类型
+        LuaAPI.lua_settop(L, errFunc - 1);  // pop ， 清理操作
+        return  __gen_ret;
+#if THREAD_SAFE || HOTFIX_ENABLE
+    }
+#endif
+}
+
+```
+
+### 5.  Class 类型
+
+以Xlua，Example中04_LuaObjectOrented为例，生成桥接代码实例```public class TutorialICalcWrap ```，调用过程类似。

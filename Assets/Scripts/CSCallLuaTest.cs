@@ -9,12 +9,23 @@ namespace XLuaTest
     {
         [CSharpCallLua]
         public delegate void funcTest(string str);
+        [CSharpCallLua]
+        public delegate int GetFunc(int x);
 
         private string script = @"
+                ClassA = {
+                    printA = function(self)
+                        print('ClassA printA')
+                    end
+                }
+                GetFunc = function(x)
+                    return x + 1
+                end
+
                 FuncTest = function(str)
                     print('FuncTest:' .. str)
                 end
-	        ";
+            ";
         private LuaEnv luaenv;
         void Start()
         {
@@ -30,18 +41,13 @@ namespace XLuaTest
             funcTest func_test = luaenv.Global.Get<funcTest>("FuncTest");
             func_test("hello funcTest");
             func_test("你好 funcTest");
+            GetFunc get_func_test = luaenv.Global.Get<GetFunc>("GetFunc");
+            Debug.Log("GetFunc result:" + get_func_test(10));
         }
 
         void OnDisable()
         {
             luaenv.Dispose();
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }
